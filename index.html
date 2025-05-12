@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dowry Calculator</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Dowry Price Calculator</h1>
+
+    <form id="dowryForm">
+      <div class="section">
+        <label for="education">Education:</label>
+        <select id="education">
+          <option value="1.5">Undergraduate</option>
+          <option value="1.2">College</option>
+          <option value="1.05">High School</option>
+          <option value="0.9">Middle School</option>
+        </select>
+      </div>
+
+      <div class="section">
+        <label for="netWorth">Family Net Worth:</label>
+        <select id="netWorth">
+          <option value="2">More than $10,000</option>
+          <option value="1.5">Between $5,000 - $10,000</option>
+          <option value="1.2">Less than $5,000</option>
+        </select>
+      </div>
+
+      <div class="section">
+        <label for="caste">Caste:</label>
+        <select id="caste">
+          <option value="100">Brahmin (+$100)</option>
+          <option value="50">Kshatriya (+$50)</option>
+          <option value="20">Vaishya (+$20)</option>
+          <option value="10">Shudra (+$10)</option>
+          <option value="-50">Untouchable (-$50)</option>
+        </select>
+      </div>
+
+      <div class="section">
+        <label>Skills:</label>
+        <div><input type="checkbox" value="10" class="skill" /> Plays Musical Instrument (+$10)</div>
+        <div><input type="checkbox" value="20" class="skill" /> Good Cook (+$20)</div>
+        <div><input type="checkbox" value="15" class="skill" /> Easygoing Character (+$15)</div>
+        <div><input type="checkbox" value="10" class="skill" /> Sings Well (+$10)</div>
+      </div>
+
+      <div class="section">
+        <label>Age:</label>
+        <div><input type="radio" name="age" value="1.5" checked /> 18-23</div>
+        <div><input type="radio" name="age" value="1.2" /> 24-27</div>
+        <div><input type="radio" name="age" value="0.95" /> 28+</div>
+      </div>
+
+      <div class="section">
+        <label>Reputation:</label>
+        <div><input type="checkbox" value="0.85" class="reputation" /> Gossips about parents (×0.85)</div>
+        <div><input type="checkbox" value="0.9" class="reputation" /> Gossips about character (×0.9)</div>
+        <div><input type="checkbox" value="-20" class="reputation-flat" /> General gossips (-$20)</div>
+      </div>
+
+      <button type="button" id="calculateBtn">Calculate Dowry</button>
+    </form>
+
+    <div id="result" class="result">Final Dowry Price: $<span id="price">100</span></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
